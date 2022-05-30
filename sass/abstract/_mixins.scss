@@ -1,0 +1,54 @@
+@mixin grid--3-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+@mixin grid-3-rows {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+@mixin grid-2-rows {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+@mixin page-layout {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80vw;
+  min-height: 70vh;
+}
+
+@mixin base-layout {
+  padding: 2rem;
+  background-image: linear-gradient(
+    108deg,
+    rgba($color-header-green-dark, 0.92) 50%,
+    rgba($color-header-green-light, 0.7)
+  );
+  border-radius: $component-radius;
+  border: $border;
+  box-shadow: $box-shadow;
+}
+
+@mixin board-text-luminosity {
+  position: absolute;
+  mix-blend-mode: luminosity;
+  text-shadow: 0 0rem 0.5rem rgba(256, 256, 256, 1);
+}
+
+@mixin button-main-active {
+  background-color: $color-board;
+  transform: translateY(-0.5rem);
+}
+
+@mixin secondary-page-header {
+  font-size: 5rem;
+  color: $color-header-primary;
+  text-transform: uppercase;
+  letter-spacing: $letterspacing-header-section;
+}

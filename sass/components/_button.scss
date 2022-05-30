@@ -1,0 +1,44 @@
+//----------------------------------//
+//         header board             //
+//----------------------------------//
+.board {
+  border-radius: $component-radius;
+  background-color: $color-board;
+}
+
+//----------------------------------//
+//         b       //
+//----------------------------------//
+.btn {
+  &__nav:link,
+  &__nav:visited {
+    clip-path: polygon(13% 0, 100% 0, 100% 100%, 32% 100%);
+    padding: 2rem 19rem;
+    text-align: center;
+    background-color: rgba($color-board, 0.8);
+    min-width: 32rem;
+    box-shadow: $box-shadow;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+}
+
+.header__nav {
+  z-index: 20;
+  & a:nth-of-type(odd):hover {
+    color: $color-neon-green;
+    @include button-main-active;
+  }
+  & a:nth-of-type(odd):active {
+    transform: translateY(0.1rem);
+  }
+
+  & a:nth-of-type(even):hover {
+    color: $color-neon-pink;
+    @include button-main-active;
+  }
+
+  & a:nth-of-type(even):active {
+    transform: translateY(0.1rem);
+  }
+}

@@ -1,0 +1,155 @@
+.header {
+  font-family: $font-header;
+
+  &__text {
+    &-board {
+      &-primary {
+        font-family: "Roboto", sans-serif;
+        font-size: 14rem;
+        letter-spacing: -10;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-header-primary;
+        text-shadow: -1.1rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
+      }
+      &-board-1 {
+        color: $color-neon-green;
+        font-size: $font-size-board;
+        text-shadow: 1rem 1rem 2rem rgba($color-neon-green, 0.25);
+        transform: translate(5%, 15%);
+        text-transform: uppercase;
+      }
+      &-board-2 {
+        color: $color-neon-pink;
+        font-size: $font-size-board;
+        text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
+        transform: translate(5%, -22%);
+        font-weight: 300;
+      }
+
+      &-board-3 {
+        transform: translate(9%, -50%);
+        color: $color-board-shine;
+        font-size: $font-size-board;
+        top: 35%;
+        opacity: 0.6;
+        text-transform: uppercase;
+        @include board-text-luminosity;
+      }
+      &-board-4 {
+        color: $color-board-shine;
+        font-size: $font-size-board;
+        text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
+        transform: translate(9%, -122%);
+        font-weight: 300;
+        opacity: 0.5;
+        @include board-text-luminosity;
+      }
+    }
+  }
+}
+.btn {
+  &__nav {
+    color: $color-header-primary;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+// -----------------------------------//
+//              ME POPUP              //
+// -----------------------------------//
+
+.me {
+  &__popup {
+    color: $color-header-primary;
+
+    &-btn-close:link,
+    &-btn-close:active {
+      color: $color-header-primary;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    &-text {
+      line-height: 1.5;
+      font-size: 1.4rem;
+    }
+
+    &-header {
+      margin-bottom: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $font-header;
+      line-height: 1.4;
+      font-size: 2.8rem;
+      letter-spacing: 1.2;
+    }
+
+    &-info {
+      font-size: $font-size-text;
+      text-transform: uppercase;
+      font-family: $font-header;
+    }
+
+    &-linkedin:link,
+    &-linkedin:visited,
+    &-cv:link,
+    &-cv:visited,
+    &-contact:link,
+    &-contact:visited {
+      text-transform: uppercase;
+      color: $color-grey;
+      text-align: center;
+      text-decoration: none;
+      height: 2.4rem;
+    }
+
+    &-linkedin:link,
+    &-linkedin:visited {
+      border-bottom: 2px solid rgba($color-neon-pink, 0.6);
+    }
+
+    &-linkedin:hover,
+    &-cv:hover {
+      color: $color-header-primary;
+      border-color: $color-neon-pink;
+      transform: skew(2deg);
+    }
+    &-linkedin:hover {
+      border-color: $color-neon-pink;
+    }
+
+    &-cv:link,
+    &-cv:visited {
+      border-bottom: 2px solid rgba($color-neon-green, 0.6);
+    }
+
+    &-cv:hover {
+      border-color: $color-neon-green;
+    }
+    &-contact:link,
+    &-contact:visited {
+      color: $color-header-primary;
+      font-size: 2.4rem;
+      border-bottom: 2px solid $color-neon-green;
+      line-height: 1.4;
+      letter-spacing: 1.2;
+      font-weight: 800;
+      height: 3.5rem;
+    }
+  }
+}
+
+// -----------------------------------//
+//              Projects              //
+// -----------------------------------//
+
+.project__page {
+  font-size: $font-size-text;
+
+  &-header {
+    @include secondary-page-header;
+  }
+}

@@ -1,0 +1,9 @@
+.img-container {
+  background-image: url("../images/pexels-johannes-plenio-1103970.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  opacity: 0.9;
+  filter: blur(8px);
+}
