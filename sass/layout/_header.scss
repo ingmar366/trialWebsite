@@ -24,8 +24,16 @@
     }
   }
   &::before {
-    content: "";
-    position: absolute;
+    @include before-after-lines;
+    clip-path: polygon(
+      20% calc(100% - 19vh),
+      calc(100% - 36.6vw) calc(100% - 19vh),
+      calc(100% - 28.9vw) 0,
+      calc(100% - 29.3vw) 0,
+      calc(100% - 37vw) calc(100% - 19.7vh),
+      20% calc(100% - 19.6vh)
+    );
+    background-color: $color-neon-green;
     // clip-path: polygon(
     //   20% calc(100% - 19vh),
     //   calc(100% - 36.7vw) calc(100% - 19vh),
@@ -42,22 +50,10 @@
     //   calc(100% - 37vw) calc(100% - 19.7vh),
     //   20% calc(100% - 19.6vh)
     // );
-    clip-path: polygon(
-      20% calc(100% - 19vh),
-      calc(100% - 36.6vw) calc(100% - 19vh),
-      calc(100% - 28.9vw) 0,
-      calc(100% - 29.3vw) 0,
-      calc(100% - 37vw) calc(100% - 19.7vh),
-      20% calc(100% - 19.6vh)
-    );
-    background-color: $color-neon-green;
-    width: 100%;
-    height: 100%;
   }
 
   &::after {
-    content: "";
-    position: absolute;
+    @include before-after-lines;
     clip-path: polygon(
       20% calc(100% - 17.2vh),
       calc(100% - 38.2vw) calc(100% - 17.2vh),
@@ -67,8 +63,6 @@
       20% calc(100% - 17.6vh)
     );
     background-color: $color-neon-pink;
-    width: 100%;
-    height: 100%;
   }
 
   &__text {

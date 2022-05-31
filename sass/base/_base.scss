@@ -18,7 +18,7 @@ body {
 
 .page {
   @include page-layout;
-  transform: translate(-50%, -50%);
+  transform: translate(-250%, -50%);
 }
 
 .project {

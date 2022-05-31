@@ -52,3 +52,38 @@
   text-transform: uppercase;
   letter-spacing: $letterspacing-header-section;
 }
+
+@mixin before-after-lines {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin project-layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  & img {
+    width: 80%;
+    grid-column: 1;
+    justify-self: start;
+    padding-left: 2rem;
+  }
+  & h3,
+  & p {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    padding-left: 4rem;
+    padding-right: 2rem;
+  }
+
+  & p {
+    padding-top: 4rem;
+  }
+}
