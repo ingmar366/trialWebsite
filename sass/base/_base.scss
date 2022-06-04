@@ -14,14 +14,49 @@ html {
 body {
   box-sizing: border-box;
   overflow: hidden;
+  color: $color-header-primary;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  font-family: $font-primary;
+}
+
+.arr-forward,
+.arr-back {
+  width: 10%;
+  max-width: 10rem;
+  position: absolute;
+  filter: invert(6%) sepia(46%) saturate(6244%) hue-rotate(235deg)
+    brightness(103%) contrast(103%);
+  bottom: 3%;
+}
+.arr-forward {
+  left: 70%;
+}
+
+.arr-back {
+  right: 70%;
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22%;
+  padding-left: 10%;
+  padding-top: 3%;
+  // transform: translate(-100%);
 }
 
 .page {
   @include page-layout;
-  transform: translate(-250%, -50%);
+  grid-column: 1;
 }
 
 .project {
   @include page-layout;
-  transform: translate(-50%, -50%);
+  grid-column: 2;
+}
+
+.contact {
+  @include page-layout;
+  grid-column: 3;
 }

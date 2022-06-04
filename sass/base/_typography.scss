@@ -1,60 +1,76 @@
+// -----------------------------------//
+//              general               //
+// -----------------------------------//
+
+.header-secundary {
+  font-size: 5rem;
+  color: $color-header-primary;
+  text-transform: uppercase;
+  letter-spacing: $letterspacing-header-section;
+}
+
+.logo {
+  filter: invert(100%) sepia(10%) saturate(5410%) hue-rotate(165deg)
+    brightness(86%) contrast(124%);
+  color: white;
+  width: 3rem;
+}
+
+// -----------------------------------//
+//              first page            //
+// -----------------------------------//
 .header {
   font-family: $font-header;
 
-  &__text {
-    &-board {
-      &-primary {
-        font-family: "Roboto", sans-serif;
-        font-size: 14rem;
-        letter-spacing: -10;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: $color-header-primary;
-        text-shadow: -1.1rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
-      }
-      &-board-1 {
-        color: $color-neon-green;
-        font-size: $font-size-board;
-        text-shadow: 1rem 1rem 2rem rgba($color-neon-green, 0.25);
-        transform: translate(5%, 15%);
-        text-transform: uppercase;
-      }
-      &-board-2 {
-        color: $color-neon-pink;
-        font-size: $font-size-board;
-        text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
-        transform: translate(5%, -22%);
-        font-weight: 300;
-      }
+  &__text-board {
+    &-primary {
+      font-family: "Roboto", sans-serif;
+      font-size: 14rem;
+      letter-spacing: -10;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-shadow: -1.1rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
+    }
+    &-board-1 {
+      color: $color-neon-green;
+      font-size: $font-size-board;
+      text-shadow: 1rem 1rem 2rem rgba($color-neon-green, 0.25);
+      transform: translate(5%, 15%);
+      text-transform: uppercase;
+    }
+    &-board-2 {
+      color: $color-neon-pink;
+      font-size: $font-size-board;
+      text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
+      transform: translate(5%, -22%);
+      font-weight: 300;
+    }
 
-      &-board-3 {
-        transform: translate(9%, -50%);
-        color: $color-board-shine;
-        font-size: $font-size-board;
-        top: 35%;
-        opacity: 0.6;
-        text-transform: uppercase;
-        @include board-text-luminosity;
-      }
-      &-board-4 {
-        color: $color-board-shine;
-        font-size: $font-size-board;
-        text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
-        transform: translate(9%, -122%);
-        font-weight: 300;
-        opacity: 0.5;
-        @include board-text-luminosity;
-      }
+    &-board-3 {
+      transform: translate(9%, -50%);
+      color: $color-board-shine;
+      font-size: $font-size-board;
+      top: 35%;
+      opacity: 0.6;
+      text-transform: uppercase;
+      @include board-text-luminosity;
+    }
+    &-board-4 {
+      color: $color-board-shine;
+      font-size: $font-size-board;
+      text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
+      transform: translate(9%, -122%);
+      font-weight: 300;
+      opacity: 0.5;
+      @include board-text-luminosity;
     }
   }
 }
-.btn {
-  &__nav {
-    color: $color-header-primary;
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
+
+.btn__nav {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 // -----------------------------------//
@@ -63,8 +79,6 @@
 
 .me {
   &__popup {
-    color: $color-header-primary;
-
     &-btn-close:link,
     &-btn-close:active {
       color: $color-header-primary;
@@ -73,8 +87,6 @@
     }
 
     &-text {
-      line-height: 1.5;
-      font-size: 1.4rem;
     }
 
     &-header {
@@ -148,8 +160,43 @@
 
 .project__page {
   font-size: $font-size-text;
+  line-height: 1.4;
+  color: hsla(192, 22%, 65%, 0.806);
 
+  & h3 {
+    text-transform: uppercase;
+    letter-spacing: -1;
+  }
+}
+
+.contact__page {
   &-header {
-    @include secondary-page-header;
+    font-family: $font-header;
+  }
+  &-info {
+    &-text {
+      text-align: start;
+      align-self: start;
+      font-size: 1.8rem;
+    }
+
+    & a {
+      color: $color-header-primary;
+    }
+    & a:link,
+    & a:visited {
+      text-decoration: none;
+      color: $color-header-primary;
+    }
+    &-email p,
+    &-phone p {
+      display: inline-block;
+    }
+    &-cv a:link,
+    &-cv a:visited,
+    &-pt a:link,
+    &-pt a:visited {
+      color: $color-grey;
+    }
   }
 }

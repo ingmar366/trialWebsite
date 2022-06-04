@@ -9,18 +9,12 @@
 //----------------------------------//
 //         b       //
 //----------------------------------//
-.btn {
-  &__nav:link,
-  &__nav:visited {
-    clip-path: polygon(13% 0, 100% 0, 100% 100%, 32% 100%);
-    padding: 2rem 19rem;
-    text-align: center;
-    background-color: rgba($color-board, 0.8);
-    min-width: 32rem;
-    box-shadow: $box-shadow;
-    transition: 0.3s;
-    text-decoration: none;
-  }
+.btn__nav:link,
+.btn__nav:visited {
+  @include main-buttons;
+  padding: 2rem 19rem;
+  min-width: 32rem;
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 32% 100%);
 }
 
 .header__nav {
@@ -41,4 +35,30 @@
   & a:nth-of-type(even):active {
     transform: translateY(0.1rem);
   }
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+  position: absolute;
+  @include main-buttons;
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 32% 100%);
+  min-width: 28rem;
+  padding: 2rem 3rem 2rem 7rem;
+  border-radius: $component-radius;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-0.3rem);
+}
+
+.btn-secondary:active {
+  transform: translateY(0.1rem);
+}
+
+.contact__page-info-cv a:hover {
+  color: $color-neon-green;
+}
+
+.contact__page-info-pt a:hover {
+  color: $color-neon-pink;
 }

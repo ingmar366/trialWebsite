@@ -1,0 +1,85 @@
+.contact__page {
+  @include base-layout;
+  @include center-lines;
+  position: relative;
+  grid-template-columns: 100fr 97fr;
+  grid-template-rows: 1fr 9fr;
+  align-items: start;
+  justify-items: center;
+  overflow: hidden;
+
+  &-header {
+    margin-left: 15%;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: start;
+
+    &-text {
+      grid-column: 1/-1;
+      grid-row: 1;
+      padding: 5rem 0 5rem 5rem;
+    }
+
+    &-cv,
+    &-pt {
+      transform: translateY(100%);
+      position: relative;
+    }
+    &-cv {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    &-pt {
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    &-email,
+    &-phone,
+    &-linkedin,
+    &-github {
+      padding-left: 2 * $padding-left-info;
+    }
+    &-email {
+      grid-row: 2;
+    }
+
+    &-phone {
+      grid-row: 3;
+    }
+
+    &-linkedin {
+      grid-row: 4;
+    }
+    &-github {
+      grid-row: 5;
+    }
+  }
+
+  &-photo {
+    position: relative;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 1/-1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, calc(100% - 28.2vw) 0);
+
+    & img {
+      width: 115%;
+      transform: translateY(-25%);
+    }
+  }
+}
+
+.logo {
+  width: 8%;
+  transform: translate(-10%, 25%);
+}
