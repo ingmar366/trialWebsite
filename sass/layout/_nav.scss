@@ -6,7 +6,7 @@
   grid-column: 2;
   z-index: 5;
   align-self: center;
-  justify-items: center;
+  justify-items: end;
   width: 100%;
   overflow: hidden;
   gap: 8rem;
@@ -17,11 +17,11 @@
     calc(100% - 38.8vw) 100%
   );
 
-  & a:first-of-type {
+  &-1 {
     align-self: end;
   }
 
-  & a:last-of-type {
+  &-2 {
     align-self: start;
   }
 
@@ -30,7 +30,7 @@
     clip-path: polygon(1% 0, 48% 0, 48% 1%, 0 1%);
     background-color: $color-neon-green;
     z-index: -1;
-    transform: translate(-20%, 39%);
+    transform: translate(-15%, 39%);
   }
 
   &::after {
@@ -38,6 +38,6 @@
     clip-path: polygon(1% 0, 55% 0, 55% 1%, 0 1%);
     background-color: $color-neon-green;
     z-index: -1;
-    transform: translate(-26%, 61%);
+    transform: translate(-21%, 61%);
   }
 }

@@ -6,7 +6,7 @@
     height: 60vh;
     min-height: 60rem;
     min-width: 50rem;
-    z-index: 50;
+    z-index: 5000;
     transform: translate(70%, -93%);
     @include grid-2-rows;
     border-radius: $component-radius;
@@ -57,12 +57,12 @@
   }
 
   &__overlay {
-    z-index: 30;
+    z-index: 3000;
     background-color: #4f5860e3;
-    width: 150vw;
-    height: 150vh;
+    width: 250vw;
+    height: 250vh;
     position: absolute;
-    top: -200%;
+    top: -250%;
     left: -50%;
   }
 }

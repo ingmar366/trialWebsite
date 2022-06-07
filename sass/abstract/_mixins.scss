@@ -17,6 +17,9 @@
   width: 80vw;
   height: 70vh;
   min-height: 74rem;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 @mixin base-layout {
@@ -68,12 +71,11 @@
   &::after {
     z-index: 1000;
     @include before-after-lines;
-    transform: translateX(-1.5%);
     clip-path: polygon(
-      calc(100% - 39.6vw) 100%,
-      calc(100% - 28.9vw) 0,
-      calc(100% - 29.1vw) 0,
-      calc(100% - 39.8vw) 100%
+      calc(100% - 40.9vw) 100%,
+      calc(100% - 30.2vw) 0,
+      calc(100% - 30.4vw) 0,
+      calc(100% - 41.1vw) 100%
     );
     background-color: $color-neon-pink;
   }

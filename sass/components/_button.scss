@@ -12,9 +12,10 @@
 .btn__nav:link,
 .btn__nav:visited {
   @include main-buttons;
-  padding: 2rem 19rem;
-  min-width: 32rem;
+  padding: 2rem 11rem 2rem 19rem;
+  min-width: 30rem;
   clip-path: polygon(13% 0, 100% 0, 100% 100%, 32% 100%);
+  margin-right: 8rem;
 }
 
 .header__nav {

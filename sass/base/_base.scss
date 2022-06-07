@@ -14,10 +14,12 @@ html {
 body {
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
   color: $color-header-primary;
   line-height: 1.5;
   font-size: 1.4rem;
   font-family: $font-primary;
+  min-height: 100vh;
 }
 
 .arr-forward,
@@ -27,14 +29,16 @@ body {
   position: absolute;
   filter: invert(6%) sepia(46%) saturate(6244%) hue-rotate(235deg)
     brightness(103%) contrast(103%);
-  bottom: 3%;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 500;
 }
 .arr-forward {
-  left: 70%;
+  left: 91%;
 }
 
 .arr-back {
-  right: 70%;
+  right: 91%;
 }
 
 .pages {
@@ -42,8 +46,9 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 22%;
   padding-left: 10%;
-  padding-top: 3%;
-  // transform: translate(-100%);
+  min-height: 100vh;
+  align-items: center;
+  transform: translateX(0%);
 }
 
 .page {
