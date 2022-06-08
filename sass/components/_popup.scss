@@ -6,8 +6,9 @@
     height: 60vh;
     min-height: 60rem;
     min-width: 50rem;
-    z-index: 5000;
-    transform: translate(70%, -93%);
+    z-index: 1000;
+    top: 50%;
+    transform: translate(90%, -75%);
     @include grid-2-rows;
     border-radius: $component-radius;
     align-items: center;
@@ -56,13 +57,22 @@
     }
   }
 
+  .position-popup {
+    transform: translate(100%, -50%) scale(1.2);
+    border: 0.5rem solid $color-neon-green;
+    transition: 0.8s;
+    &:hover {
+      transform: translate(100%, -50%) scale(1.2);
+    }
+  }
+
   &__overlay {
-    z-index: 3000;
-    background-color: #4f5860e3;
-    width: 250vw;
-    height: 250vh;
-    position: absolute;
-    top: -250%;
-    left: -50%;
+    z-index: 100;
+    background-color: #4f5860fa;
+    width: 240vw;
+    height: 240vh;
+    position: fixed;
+    left: 0;
+    top: 0;
   }
 }

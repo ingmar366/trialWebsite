@@ -32,23 +32,22 @@
       text-shadow: -1.1rem 0.7rem 1rem rgba(0, 0, 0, 0.4);
     }
     &-board-1 {
-      color: $color-neon-green;
+      color: rgba($color-grey, 0.8);
       font-size: $font-size-board;
-      text-shadow: 1rem 1rem 2rem rgba($color-neon-green, 0.25);
       transform: translate(5%, 15%);
       text-transform: uppercase;
     }
     &-board-2 {
-      color: $color-neon-pink;
+      color: rgba($color-grey, 0.8);
       font-size: $font-size-board;
-      text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
       transform: translate(5%, -22%);
       font-weight: 300;
     }
 
     &-board-3 {
       transform: translate(9%, -50%);
-      color: $color-board-shine;
+      // color: $color-board-shine;
+      color: rgba($color-grey, 0.8);
       font-size: $font-size-board;
       top: 35%;
       opacity: 0.6;
@@ -56,15 +55,23 @@
       @include board-text-luminosity;
     }
     &-board-4 {
-      color: $color-board-shine;
+      // color: $color-board-shine;
+      color: rgba($color-grey, 0.8);
       font-size: $font-size-board;
-      text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
       transform: translate(9%, -122%);
       font-weight: 300;
       opacity: 0.5;
       @include board-text-luminosity;
     }
   }
+}
+.board-shadow-green {
+  text-shadow: 1rem 1rem 2rem rgba($color-neon-green, 0.25);
+  color: $color-neon-green;
+}
+.board-shadow-pink {
+  text-shadow: 1rem 1rem 2rem rgba($color-neon-pink, 0.6);
+  color: $color-neon-pink;
 }
 
 .btn__nav {
@@ -84,9 +91,6 @@
       color: $color-header-primary;
       font-size: 2rem;
       text-decoration: none;
-    }
-
-    &-text {
     }
 
     &-header {

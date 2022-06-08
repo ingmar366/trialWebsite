@@ -88,9 +88,13 @@
   transform: scale(0.93, 0.81);
   stroke-dasharray: 1300;
   stroke-dashoffset: 1300;
-  // animation: animate 2s linear;
-  // animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
   // animation-delay: 4s;
+}
+.animation {
+  animation: animate 2s linear;
+  animation-fill-mode: forwards;
 }
 
 .robot {
@@ -117,7 +121,7 @@
     transform: translate(12rem, 3rem);
     box-shadow: -1.1rem 0.7rem 1rem rgba(0, 0, 0, 0.2);
     z-index: 10000;
-    transition: 0.5s;
+    transition: 0.8s;
 
     &:hover {
       cursor: pointer;
